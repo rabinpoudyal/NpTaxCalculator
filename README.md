@@ -21,12 +21,17 @@ Or install it yourself as:
 The tax calculator takes two parameters :annual_taxable_income and tax_status.
 There can be more tax status than the following case.
 
+```ruby
 NpTaxCalculator::TaxCalculator.new.calculate_tax(1400000, "Single")
 NpTaxCalculator::TaxCalculator.new.calculate_tax(100000, "Married")
+```
 
 The output is the 2D array that contains tax rate applied, tax amount and tax slab.
+```ruby
 [ [tax_rate_applied, tax_amount, tax_slab]... ]
+```
 
+Note: Only fiscal year 75/76 is supported as of now
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
