@@ -18,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-NpTaxCalculator::
+The tax calculator takes two parameters :annual_taxable_income and tax_status.
+There can be more tax status than the following case.
+
+NpTaxCalculator::TaxCalculator.new.calculate_tax(1400000, "Single")
+NpTaxCalculator::TaxCalculator.new.calculate_tax(100000, "Married")
+
+The output is the 2D array that contains tax rate applied, tax amount and tax slab.
+[ [tax_rate_applied, tax_amount, tax_slab]... ]
 
 ## Development
 
